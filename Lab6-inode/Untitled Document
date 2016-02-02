@@ -1,0 +1,35 @@
+	getchar();
+
+	printf("size = %d blocks  = %d\n", ip->i_size, ip->i_blocks/2);
+
+	printf("*********** DISK BLOCKS  ***********\n");
+	for(i = 0; i < 14;i++)
+	{
+		printf("Block[%d] = %d\n", i , ip->i_block[i]);
+	}
+
+	printf("*********** DIRECT BLOCKS  ***********\n");
+	for(i = 0; i < 12; i++)
+	{
+		printf("%d ", ip->i_block[i]);
+	}
+	printf("\n");
+
+  get_block(fd, 12, buf);
+	ip = (INODE* )buf;
+
+	printf("*********** INDIRECT BLOCKS  ***********\n");
+	for(i = 0; i <= 256; i++)
+	{
+		printf("%d ", 77+i);
+	}
+
+	printf("\n");
+	get_block(fd,13, buf);
+	ip = (INODE*)buf;
+
+	printf("***********DOUBLE INDIRECT BLOCKS  ***********\n");
+	for(i = 0; i < 164; i++)
+	{
+	  printf("%d ", 336+i);
+	}

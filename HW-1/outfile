@@ -1,0 +1,17 @@
+enter main
+&argc=fffa81c0 argv=fffa8254 env=fffa8268
+&a=fffa81a4 &b=fffa81a8 &c=fffa81ac
+enter A
+&d=fffa8174 &e=fffa8178 &f=fffa817c
+enter B
+&g=fffa8144 &h=fffa8148 &i=fffa814c
+enter C
+&u=fffa8110 &v=fffa8114 &w=fffa8118
+FP = fffa8128
+exit C
+FP = fffa8158
+exit B
+FP = fffa8188
+exit A
+Main FP = fffa8188
+exit main

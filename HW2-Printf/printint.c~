@@ -1,0 +1,37 @@
+#define BASE 10
+#define OCT 8
+#define HEX 16
+
+char *table = "0123456789ABCDEF";
+
+int rpu(u32 x)
+{
+  char c;
+  if (x){
+     c = table[x % BASE];
+     rpu(x / BASE);
+     putchar(c);
+  }
+} 
+
+int printu(u32 x)
+{
+  if (x==0)
+     putchar('0');
+  else
+     rpu(x);
+  putchar(' ');
+}
+int printd(int x)
+{
+  
+}
+
+int printo(u32 x)
+{
+	
+}
+int printx(u32 x)
+{
+
+}
